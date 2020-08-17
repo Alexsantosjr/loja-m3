@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência M3</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/responsive.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container-menu">
+            <img src="./images/logo-m3.png" alt="">
+            <div class="sacs">
+                <img class="image-bag" src="./images/bag.svg" alt="">
+                <a class="cart"></a>
+            </div>
+        </div>
+    </header>
+    
+    
+    <div class="listen"></div>
+
+    <section class="container">
+        
+        <div class="filters">
+            <h3>Blusas</h3>
+
+            <div class="colors">
+                <h4>Cores</h4>
+                
+                <ul>
+                    <li>
+                        <input type="checkbox" name="amarelo" class="checkbox">
+                        <label for="amarelo">Amarelo</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox"  name="azul"class="checkbox">
+                        <label for="azul">Azul</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="branco" class="checkbox">
+                        <label for="branco">Branco</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="cinza" class="checkbox">
+                        <label for="cinza">Cinza</label>
+                    </li>
+
+                <ul>
+                    <li>
+                        <input type="checkbox" name="laranja" class="checkbox">
+                        <label for="laranja">Laranja</label>
+                    </li>
+                </ul>
+
+
+            <div class="see-colors" hidden>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="preto" class="checkbox">
+                        <label for="preto">Preto</label>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <input type="checkbox" name="rosa" class="checkbox">
+                        <label for="rosa">Rosa</label>
+                    </li>
+                </ul>
+            </div>
+
+                <p class="see">Ver todas as cores</p>
+            </div>
+
+            <div class="sizes">
+                <h1>Tamanhos</h1>
+
+                <div class="choose-size">
+                    <p class="size">P</p>
+                    <p class="size">M</p>
+                    <p class="size">G</p>
+                    <p class="size">GG</p>
+                    <p class="size">U</p>
+                    <p class="size">36</p>
+                    <p class="size">38</p>
+                    <p class="size">40</p>
+                    <p class="size">42</p>
+                    <p class="size">44</p>
+                    <p class="size">46</p>
+                </div>
+            </div>
+
+            <div class="prices">
+                <h1>Faixa de preço</h1>
+
+                <ul>
+                    <li>
+                        <input type="checkbox" name="price-one" class="checkbox_price">
+                        <label for="price-one">de R$0 até R$50</label>
+                    </li>
+                
+                    <li>
+                        <input type="checkbox" name="price-two" class="checkbox_price">
+                        <label for="price-two">de R$51 até R$150</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="price-three" class="checkbox_price">
+                        <label for="price-three">de R$151 até R$300</label>
+                    </li>
+                
+                    <li>
+                        <input type="checkbox" name="price-four" class="checkbox_price">
+                        <label for="price-four">de R$301 até R$500</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="price-five" class="checkbox_price">
+                        <label for="price-five">a partir R$501</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    <div class="flex">
+        
+        <div class="blouse">
+            <h3>Blusas</h3>
+        </div>
+
+        <div class="buttons">
+            <a class="button-filter">Filtrar</a>
+            <a class="button-order">Ordenar</a>
+        </div>
+
+        <div class="select-options">
+            <select class="selected-options" onchange="filterProduct()">
+                <option value="" disabled hidden selected>Ordenar por:</option>
+                <option value="recent-product">Mais Recente</option>
+                <option value="lower-price-product">Menor Preço</option>
+                <option value="more-price">Maior Preço</option>
+            </select>
+        </div>
+
+        <div class="container-products"></div>
+
+    </div>
+
+        <button class="load">Carregar Mais</button>
+        
+    </section>
+
+    <div class="modal-overlay">
+        <div class=" modal">
+
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    <h3>Filtrar</h3>
+    
+                    <a class="close-modal">
+                        <i class="material-icons">close</i>
+                    </a>
+                </div>
+
+                <div class="modal-filter">
+        
+                    <div class="colors">
+                    
+                        <div class="modal-color">
+                            <h4>Cores</h4>
+                        
+                            <a class="remove-modal remove-buttons">
+                                <i class="material-icons remove">remove</i>
+                                <i class="material-icons add">add</i>
+                            </a>
+                        </div>
+                        
+                        <ul class="remove-colors remove-display">
+                            <li>
+                                <input type="checkbox" name="amarelo" class="checkbox">
+                                <label for="amarelo">Amarelo</label>
+                            </li>
+        
+                            <li>
+                                <input type="checkbox"  name="azul"class="checkbox">
+                                <label for="azul">Azul</label>
+                            </li>
+        
+                            <li>
+                                <input type="checkbox" name="branco" class="checkbox">
+                                <label for="branco">Branco</label>
+                            </li>
+        
+                            <li>
+                                <input type="checkbox" name="cinza" class="checkbox">
+                                <label for="cinza">Cinza</label>
+                            </li>
+        
+                            <li>
+                                <input type="checkbox" name="laranja" class="checkbox">
+                                <label for="laranja">Laranja</label>
+                            </li>
+        
+        
+                            <li>
+                                <input type="checkbox" name="verde" class="checkbox">
+                                <label for="verde">Verde</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" name="vermelho" class="checkbox">
+                                <label for="vermelho">Vermelho</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" name="preto" class="checkbox">
+                                <label for="preto">Preto</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" name="rosa" class="checkbox">
+                                <label for="rosa">Rosa</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" name="vinho" class="checkbox">
+                                <label for="vinho">Vinho</label>
+                            </li>
+                        </ul>
+                    </div>
+        
+                    <div class="sizes">
+                        
+                        <div class="modal-sizes remove-display">
+                            <h1>Tamanhos</h1>
+
+                            <a class="remove-sizes remove-buttons">
+                                <i class="material-icons sizes-remove">remove</i>
+                                <i class="material-icons sizes-add">add</i>
+                            </a>
+                        </div>
+                        
+                        <div class="modal-choose">
+                            <div class="choose-size">
+                                <p class="size">P</p>
+                                <p class="size">M</p>
+                                <p class="size">G</p>
+                                <p class="size">GG</p>
+                                <p class="size">U</p>
+                                <p class="size">36</p>
+                                <p class="size">38</p>
+                                <p class="size">40</p>
+                                <p class="size">42</p>
+                                <p class="size">44</p>
+                                <p class="size">46</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="prices">
+                        
+                        <div class="modal-prices">
+                            <h1>Faixa de preço</h1>
+
+                            <a class="btnremove-prices remove-buttons">
+                                <i class="material-icons prices-remove">remove</i>
+                                <i class="material-icons prices-add">add</i>
+                            </a>
+                        </div>
+        
+                        <ul class="remove-prices remove-display">
+                            <li>
+                                <input type="checkbox" name="price-one" class="checkbox_price">
+                                <label for="price-one">de R$0 até R$50</label>
+                            </li>
+                        
+                            <li>
+                                <input type="checkbox" name="price-two" class="checkbox_price">
+                                <label for="price-two">de R$51 até R$150</label>
+                            </li>
+        
+                            <li>
+                                <input type="checkbox" name="price-three" class="checkbox_price">
+                                <label for="price-three">de R$151 até R$300</label>
+                            </li>
+                        
+                            <li>
+                                <input type="checkbox" name="price-four" class="checkbox_price">
+                                <label for="price-four">de R$301 até R$500</label>
+                            </li>
+        
+                            <li>
+                                <input type="checkbox" name="price-five" class="checkbox_price">
+                                <label for="price-five">a partir R$501</label>
+                            </li>
+                        </ul>
+
+                        <div class="apply">
+                            <a href="/index.html" class="button-apply">Aplicar</a>
+                            <a href="/" class="button-clean">Limpar</a>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay-order">
+        <div class="modal">
+    
+            <div class="modal-content-order">
+                <div class="modal-header">
+                    <h3>Ordernar</h3>
+    
+                    <a class="close-modal-order">
+                        <i class="material-icons">close</i>
+                    </a>
+                </div>
+
+                <div class="modal-orders">
+                    <a href="">Mais Recente</a>
+                    <a href="">Menor Preço</a>
+                    <a href="">Maior Preço</a>
+                </div>
+                
+            </div>   
+        </div>    
+    </div>
+
+
+
+    <footer>
+        <p>Agência M3 - Agência de Performance Digital</p>
+    </footer>
+    <script src="./js/script.min.js"></script>
+</body>
+</html>

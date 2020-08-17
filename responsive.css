@@ -1,0 +1,233 @@
+@media (min-width: 340px) and (max-width: 940px){
+    
+  .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .select-options{
+      display: none;
+      align-self: center;
+      margin-top: 30px;
+  }
+  .container-products{
+      padding-top: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      display: grid;
+      box-sizing: border-box;
+      gap: 5px;
+      grid-template-columns: 1fr 1fr;
+  }
+
+  .filters{
+      display: none;
+  }
+  
+  .buttons{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
+  .buttons a{
+      border: 1px solid var(--three-color);
+      padding: 12px;
+      min-width: 40%;
+      text-align: center;
+      color: black;        
+  }
+  .blouse h3{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      font-weight: 400;
+      font-size: 24px;
+      padding-bottom: 28px;
+  }
+  .modal-overlay{
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      visibility: hidden;
+  }
+  .modal-overlay-order{
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      visibility: hidden;
+  }
+  .modal-overlay-order.active{
+      opacity: 1;
+      visibility: visible;
+  }
+  .modal{
+      background-color: white;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+  }
+
+  .modal-header{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 640px;
+      padding: 24px;
+      grid-column-start: 3;
+      border: 1px solid var(--secondary-color);
+  }
+
+ .modal-header h3{
+      font-weight: 100;
+      text-transform: uppercase;
+  }
+  
+  .close-modal-order{
+      text-align: right;
+      cursor: pointer;
+  }
+
+  .modal .close-modal{
+      color: black;
+      cursor: pointer;
+      text-align: right;
+  }
+
+  .modal-overlay.active{
+      opacity: 1;
+      visibility: visible;
+  }
+  .modal-content{
+      opacity: 0;
+  }
+  .modal-content.active{
+      opacity: 1;
+  }
+  .modal-content-order{
+      display: none;
+  }
+  .modal-content-order.active{
+      display: block;
+  }
+  .modal-filter{
+      display: flex;
+      flex-direction: column ;
+  }
+
+  .modal-filter .colors h4{
+      padding-left: 20px;
+  }
+
+  .modal-filter ul {
+      padding-left: 32px;
+  }
+
+  .modal-filter .sizes h1{
+      padding-left: 20px;
+  }
+
+  .modal-filter .choose-size{
+      padding-left: 32px;
+  }
+
+  .modal-filter h1{
+      padding-left: 20px;
+  }
+
+  .modal-filter .apply{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      padding-top: 24px;
+
+      gap: 20px;
+      margin-bottom: 24px;
+  }
+
+  .modal-filter .apply a{
+      border: 1px solid var(--secondary-color);
+      padding: 8px 48px;
+      text-transform: uppercase;
+  }
+
+  .modal-filter .apply a:nth-child(1){
+      color: white;
+      background-color: var(--primary-color);
+  }
+
+  .modal-filter .apply a:nth-child(2){
+      color: black;
+  }
+
+  .modal-filter .modal-color{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 640px;
+      margin-right: 24px;
+      grid-column-start: 3;
+  }
+
+  .remove-modal{
+      text-align: right;
+      cursor: pointer;
+  }
+
+  .remove-modal .add{
+      display: none;
+  }
+
+  .sizes .modal-sizes{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 640px;
+      margin-right: 24px;
+  }
+  
+  .sizes .remove-sizes{
+      text-align: right;
+      cursor: pointer;
+  }
+
+  .sizes .modal-sizes .sizes-add{
+      display: none;
+  }
+
+  .prices .modal-prices{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 640px;
+      margin-right: 24px;
+  }
+
+  .prices .btnremove-prices{
+      text-align: right;
+      cursor: pointer;
+  }
+
+  .prices .modal-prices .prices-add{
+      display: none;
+  }
+
+  .modal-orders{
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .modal-orders a{
+      padding: 12px 16px;
+      color: black;
+  }
+
+  .modal-orders a:hover{
+      color: var(--primary-color);
+      transition: 500ms;
+  }
+}
